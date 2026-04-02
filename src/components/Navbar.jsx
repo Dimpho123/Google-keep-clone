@@ -23,18 +23,14 @@ function Navbar({ setSearch, darkMode, setDarkMode, onMenuClick }) {
       </div>
 
       {/* SEARCH */}
-      <div className="search-box">
-        <svg width="20" height="20" viewBox="0 0 24 24">
-          <path
-            fill="#5f6368"
-            d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 1014 15.5l.27.28v.79L20 21.49 21.49 20l-5.99-6zM10 15a5 5 0 110-10 5 5 0 010 10z"
-          />
-        </svg>
-        <input
-          placeholder="Search"
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      <div class="search-area">
+        <div class="tooltip">
+          <span class="material-symbols-outlined hover">search</span>
+         
+        </div>
+          <input type="text" placeholder="Search" />
       </div>
+      
 
       {/* DARK MODE TOGGLE */}
       <button className="icon-btn" onClick={() => setDarkMode(!darkMode)}>
